@@ -1,0 +1,9 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+<h1>Current Todos</h1>
+
+{% for todo in todos%}
+<a href="{% url 'viewtodo' todo.id %}"> <h1>Title: {{ todo.title }}</h1></a>
+{% endfor %}
+{% endblock %}
